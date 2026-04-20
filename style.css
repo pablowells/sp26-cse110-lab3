@@ -91,3 +91,152 @@ p {
     background-color: #fbe8d6; /* fallback */
     background-color: color-mix(in srgb, var(--accent-color) 10%, white 90%);
 }
+
+/* ---------- Page title: box-model LONGHAND ---------- */
+.todays-meeting {
+    /* Longhand margin (includes auto margins for centering) */
+    margin-top: 0.5em;
+    margin-right: auto;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    /* Longhand padding */
+    padding-top: 12px;
+    padding-right: 8px;
+    padding-bottom: 12px;
+    padding-left: 8px;
+    /* Border longhand properties */
+    border-style: solid;
+    border-color: var(--accent-color);
+    border-width: var(--border-thickness);
+    border-radius: 8px;
+    /* Sizing */
+    width: 60%;          /* % — relative unit */
+    max-width: 700px;
+    min-width: 280px;
+}
+ 
+/* ---------- element.class combined selector ---------- */
+h1.todays-meeting {
+    font-size: 2.25rem;  /* rem — relative unit */
+}
+ 
+/* ---------- ID selector with border shorthand ---------- */
+#unfinished {
+    border: 1px dashed orange; /* named color + border SHORTHAND */
+}
+ 
+/* ---------- Section cards: box-model SHORTHAND ---------- */
+main section {
+    margin: 1rem 0.5rem 1rem 0.5rem;  /* margin SHORTHAND: T R B L */
+    padding: 1rem;                     /* padding SHORTHAND */
+    border: 1px solid #ddd;            /* border SHORTHAND */
+    border-radius: 8px;
+    background-color: #ffffff;
+    height: auto;                      /* height declared */
+}
+ 
+main {
+    max-width: 8.5in;    /* in — absolute unit */
+    margin: 0 auto;      /* auto margins */
+}
+ 
+/* ---------- Text styling ---------- */
+p {
+    color: var(--text-color);
+    text-align: left;
+    padding: 0.5rem;
+    border-radius: 4px;
+}
+ 
+.meeting-agenda {
+    text-align: center;
+}
+ 
+/* ---------- Attribute selector: in-page anchor links ---------- */
+a[href^="#"] {
+    color: var(--accent-color);
+    text-decoration: none;
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+ 
+img[alt] {
+    border: 2px solid var(--primary-color);
+    border-radius: 6px;
+    display: block;        /* display: block */
+    margin: 0 auto;
+}
+ 
+/* ---------- Display values ---------- */
+.hidden {
+    display: none;         /* display: none */
+}
+ 
+li em {
+    display: inline;       /* display: inline */
+    color: var(--accent-color);
+}
+ 
+/* ---------- :hover and :active ---------- */
+a:hover {
+    background-color: var(--accent-color);
+    color: white;
+    text-decoration: underline;
+}
+ 
+a:active {
+    background-color: rgba(44, 62, 80, 0.85);
+    color: white;
+}
+ 
+/* ---------- Descendant combinator (space) ---------- */
+nav li {
+    margin-bottom: 4pt;    /* pt — absolute unit */
+}
+ 
+/* ---------- Child combinator (>) ---------- */
+.Attendance > summary {
+    cursor: pointer;
+    font-weight: 700;
+    color: var(--primary-color);
+    padding: 4px 8px;
+    display: inline-block; /* display: inline-block */
+}
+ 
+details.Attendance ul {
+    padding-left: 2cm;     /* cm — absolute unit */
+}
+ 
+/* ---------- Adjacent sibling combinator (+) ---------- */
+hr + h2 {
+    margin-top: 0.5rem;
+}
+ 
+/* ---------- General sibling combinator (~) ---------- */
+h2 ~ p {
+    font-style: italic;
+}
+ 
+/* ---------- :has() (adopted 2023) ---------- */
+section:has(img) {
+    background-color: hsla(45, 80%, 95%, 0.6);
+    border-left: 4px solid var(--accent-color);
+    padding-left: 1rem;
+}
+ 
+/* ---------- Position: static + relative + sticky ---------- */
+main img {
+    position: static;
+}
+ 
+header hr {
+    position: relative;
+    top: 0;
+}
+ 
+nav {
+    position: sticky;
+    top: 0;
+    background-color: var(--bg-color);
+    z-index: 5;
+}
