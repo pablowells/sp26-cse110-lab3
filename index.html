@@ -4,14 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pablo's Meeting Minutes</title>
-    <link rel="icon" type="image/x-icon" href="./media/favicon.ico"> 
-    <link rel="stylesheet" href="style.css"> 
+    <link rel="icon" type="image/x-icon" href="./media/favicon.ico">
+    <!-- 3rd party font from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap">
+    <link rel="stylesheet" href="style.css">
+    <!-- Internal CSS using <style> element (convenient for quick experiments) -->
+    <style>
+      .todays-meeting {
+        letter-spacing: 2px;
+        text-transform: uppercase;
+      }
+    </style>
   </head>
   <body>
     <header>
-        <h1 class="todays-meeting">Today's Meeting</h1>
+        <!-- Inline CSS (helpful for debugging) -->
+        <h1 class="todays-meeting" style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);">Today's Meeting</h1>
         <hr>
-        <nav>   
+        <nav>
             <h2 class="meeting-agenda">Meeting Agenda</h2>
             <ol>
                 <li><a href="#unfinished"> Unfinished Business</a></li>
@@ -20,11 +32,11 @@
                 <li><a href="#pictures"> Pictures, Architecture, Things Presented </a></li>
                 <li><a href="#audio"> Audio Recording </a></li>
                 <li><a href="#video"> Video Recording </a></li>
-            </ol> 
+            </ol>
         </nav>
         <details class="Attendance">
             <summary>Attendance</summary>
-            <ul> 
+            <ul>
                 <li> Pablo Wells </li>
                 <li> Tony Stark </li>
                 <li> John Wick </li>
@@ -35,8 +47,8 @@
     <main>
         <section>
             <hr>
-            <h2 id ='unfinished'>Unfinished Business</h2>
-            <ul> 
+            <h2 id='unfinished'>Unfinished Business</h2>
+            <ul>
                 <li><div>
                     We did not finish our discussion about <b>bold text</b>
                     <p>However, lets especially be aware about <br> breaks and paragraphs</p></div></li>
@@ -47,8 +59,8 @@
         </section>
         <section>
             <hr>
-            <h2 id ='new'>New Business</h2>
-            <ul> 
+            <h2 id='new'>New Business</h2>
+            <ul>
                 <li><div>
                     Let us now discuss span it is mainly useful with CSS.<span> <i>This is within a span</i></span></div>
                 </li>
@@ -56,26 +68,26 @@
         </section>
         <section>
             <hr>
-            <h2 id ='thoughts'>Thoughts, Comments, Concerns</h2>
+            <h2 id='thoughts'>Thoughts, Comments, Concerns</h2>
         </section>
         <section>
             <hr>
-            <h2 id ='pictures'>Pictures, Architecture, Things Presented</h2>
+            <h2 id='pictures'>Pictures, Architecture, Things Presented</h2>
             <p> This is a diagram of our app</p>
-            <img src = './media/system.jpg' alt='diagram' width="300" height="300">
+            <img src='./media/system.jpg' alt='diagram' width="300" height="300">
         </section>
     </main>
 
     <footer>
         <section>
             <hr>
-            <h2 id ='audio'>Audio Recording</h2>
+            <h2 id='audio'>Audio Recording</h2>
             <p>The following is our meeting audio</p>
             <audio controls src="./media/moo.mp3"></audio>
         </section>
         <section>
             <hr>
-            <h2 id ='video'>Video Recording</h2>
+            <h2 id='video'>Video Recording</h2>
             <p>The following is our meeting video</p>
             <video controls width="250">
                 <source src="./media/dance.mp4" type="video/mp4" />
@@ -105,7 +117,7 @@
                 <label for="advice">Enter your advice: </label>
             </div>
             <div>
-                <textarea id="advice" name="feedback" rows="5" cols="40" placeholder="Type here..."></textarea>            
+                <textarea id="advice" name="feedback" rows="5" cols="40" placeholder="Type here..."></textarea>
             </div>
             <fieldset>
                 <legend>Can we follow up with you?</legend>
