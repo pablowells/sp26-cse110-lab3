@@ -204,7 +204,7 @@ nav li {
 }
  
 details.Attendance ul {
-    padding-left: 1cm;     /* cm — absolute unit */
+    padding-left: 2cm;     /* cm — absolute unit */
 }
  
 /* ---------- Adjacent sibling combinator (+) ---------- */
